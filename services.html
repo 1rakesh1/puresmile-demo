@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PureSmile — Our Services | Chandigarh Dental Clinic</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "surface-bright": "#fcf9f0",
+          "background": "#fcf9f0",
+          "on-background": "#1c1c17",
+          "outline-variant": "#c4c6d0",
+          "outline": "#74777f",
+          "on-surface-variant": "#43474e",
+          "surface-variant": "#e5e2da",
+          "on-primary": "#ffffff",
+          "secondary-container": "#fdad67",
+          "primary": "#000e24",
+          "secondary": "#8c4f10",
+          "surface-dim": "#dddad1",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-highest": "#e5e2da",
+          "on-secondary-container": "#763f00",
+          "on-primary-container": "#718bb9",
+          "tertiary-container": "#371d00",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed": "#001b3d",
+          "surface-container": "#f1eee5",
+          "on-surface": "#1c1c17",
+          "surface-container-low": "#f6f3ea",
+          "primary-fixed": "#d6e3ff",
+          "primary-container": "#00234b",
+          "surface": "#fcf9f0",
+          "surface-container-high": "#ebe8df",
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        fontFamily: {
+          "headline": ["Playfair Display"],
+          "body": ["Plus Jakarta Sans"],
+          "label": ["Plus Jakarta Sans"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+  #mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  #mobile-menu.open {
+    max-height: 400px;
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+
+<!-- Header injected here -->
+<div id="header-placeholder"></div>
+<script src="header.js"></script>
+
+<main class="pt-16 md:pt-20">
+
+  <!-- ===================== PAGE HERO ===================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <span class="text-xs uppercase tracking-[0.2em] text-[#8c4f10] font-semibold">Our Treatments</span>
+        <h1 class="text-5xl md:text-6xl leading-tight text-[#000e24]">Specialist Dental Care in Chandigarh</h1>
+        <p class="text-[#43474e] text-lg md:text-xl max-w-lg leading-relaxed">
+          From routine check-ups to advanced cosmetic and restorative treatments — every procedure at PureSmile is delivered with precision, care, and a commitment to lasting results.
+        </p>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-[#000e24] text-white px-7 py-3.5 rounded-xl font-medium hover:bg-[#00234b] hover:-translate-y-0.5 transition-all duration-200 active:scale-95 select-none">
+          Book a Consultation
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+      <div class="relative rounded-xl overflow-hidden aspect-[4/3] shadow-sm">
+        <img
+          class="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=900&q=80"
+          alt="PureSmile Chandigarh dental clinic interior"
+        />
+        <div class="absolute inset-0 bg-[#000e24]/10"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES GRID ===================== -->
+  <section class="bg-[#f6f3ea] py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="mb-14">
+        <span class="text-xs uppercase tracking-[0.2em] text-[#8c4f10] font-semibold block mb-3">What We Offer</span>
+        <h2 class="text-4xl md:text-5xl text-[#000e24]">Our Clinical Disciplines</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- General Dentistry -->
+        <div class="bg-white p-8 rounded-xl hover:shadow-lg transition-all duration-300 group">
+          <span class="material-symbols-outlined text-[#8c4f10] text-4xl mb-6 block">medical_services</span>
+          <h3 class="text-2xl mb-3 text-[#000e24]">General Dentistry</h3>
+          <p class="text-[#43474e] leading-relaxed mb-6">Routine check-ups, cleanings, fillings, and preventive care — the foundation of a healthy smile, handled with meticulous attention at every visit.</p>
+          <a href="contact.html" class="text-[#8c4f10] font-semibold flex items-center gap-2 group-hover:gap-4 transition-all duration-300 text-sm">
+            Book Appointment <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Teeth Whitening -->
+        <div class="bg-white p-8 rounded-xl hover:shadow-lg transition-all duration-300 group">
+          <span class="material-symbols-outlined text-[#8c4f10] text-4xl mb-6 block">auto_awesome</span>
+          <h3 class="text-2xl mb-3 text-[#000e24]">Teeth Whitening</h3>
+          <p class="text-[#43474e] leading-relaxed mb-6">Professional brightening treatments that restore your smile's natural radiance while protecting enamel — both in-clinic and take-home options available.</p>
+          <a href="contact.html" class="text-[#8c4f10] font-semibold flex items-center gap-2 group-hover:gap-4 transition-all duration-300 text-sm">
+            Book Appointment <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Orthodontics -->
+        <div class="bg-white p-8 rounded-xl hover:shadow-lg transition-all duration-300 group">
+          <span class="material-symbols-outlined text-[#8c4f10] text-4xl mb-6 block">straighten</span>
+          <h3 class="text-2xl mb-3 text-[#000e24]">Orthodontics</h3>
+          <p class="text-[#43474e] leading-relaxed mb-6">Discreet alignment solutions including Invisalign and ceramic braces, engineered for precision and designed to fit seamlessly into your daily life.</p>
+          <a href="contact.html" class="text-[#8c4f10] font-semibold flex items-center gap-2 group-hover:gap-4 transition-all duration-300 text-sm">
+            Book Appointment <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Dental Implants -->
+        <div class="bg-white p-8 rounded-xl hover:shadow-lg transition-all duration-300 group">
+          <span class="material-symbols-outlined text-[#8c4f10] text-4xl mb-6 block">dentistry</span>
+          <h3 class="text-2xl mb-3 text-[#000e24]">Dental Implants</h3>
+          <p class="text-[#43474e] leading-relaxed mb-6">Permanent tooth replacement that looks, feels, and functions like your natural teeth — restoring confidence and bite strength for the long term.</p>
+          <a href="contact.html" class="text-[#8c4f10] font-semibold flex items-center gap-2 group-hover:gap-4 transition-all duration-300 text-sm">
+            Book Appointment <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Root Canal -->
+        <div class="bg-white p-8 rounded-xl hover:shadow-lg transition-all duration-300 group">
+          <span class="material-symbols-outlined text-[#8c4f10] text-4xl mb-6 block">biotech</span>
+          <h3 class="text-2xl mb-3 text-[#000e24]">Root Canal Treatment</h3>
+          <p class="text-[#43474e] leading-relaxed mb-6">Specialist endodontic care focused on saving your natural teeth through precision techniques — performed gently to keep discomfort minimal.</p>
+          <a href="contact.html" class="text-[#8c4f10] font-semibold flex items-center gap-2 group-hover:gap-4 transition-all duration-300 text-sm">
+            Book Appointment <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Kids Dentistry -->
+        <div class="bg-white p-8 rounded-xl hover:shadow-lg transition-all duration-300 group">
+          <span class="material-symbols-outlined text-[#8c4f10] text-4xl mb-6 block">child_care</span>
+          <h3 class="text-2xl mb-3 text-[#000e24]">Kids Dentistry</h3>
+          <p class="text-[#43474e] leading-relaxed mb-6">A warm, friendly environment where children learn to love looking after their teeth. We make every visit positive so healthy habits start early.</p>
+          <a href="contact.html" class="text-[#8c4f10] font-semibold flex items-center gap-2 group-hover:gap-4 transition-all duration-300 text-sm">
+            Book Appointment <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PATIENT JOURNEY ===================== -->
+  <section class="py-20 md:py-28 bg-[#fcf9f0]">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 text-center">
+      <div class="mb-16">
+        <span class="text-xs uppercase tracking-[0.2em] text-[#8c4f10] font-semibold block mb-3">How It Works</span>
+        <h2 class="text-4xl md:text-5xl text-[#000e24]">The Patient Journey</h2>
+      </div>
+
+      <div class="relative flex flex-col md:flex-row items-center justify-between gap-12 md:gap-0">
+
+        <!-- Step 01 -->
+        <div class="flex flex-col items-center px-8 relative z-10">
+          <span class="font-headline text-5xl text-[#8c4f10]/20 italic mb-4 leading-none">01</span>
+          <h4 class="text-xl text-[#000e24] mb-2">Book</h4>
+          <p class="text-[#43474e] text-sm tracking-wide max-w-[180px]">Call us or request an appointment online</p>
+        </div>
+
+        <!-- Step 02 -->
+        <div class="flex flex-col items-center px-8 relative z-10">
+          <span class="font-headline text-5xl text-[#8c4f10]/20 italic mb-4 leading-none">02</span>
+          <h4 class="text-xl text-[#000e24] mb-2">Consult</h4>
+          <p class="text-[#43474e] text-sm tracking-wide max-w-[180px]">A thorough clinical assessment with your specialist</p>
+        </div>
+
+        <!-- Step 03 -->
+        <div class="flex flex-col items-center px-8 relative z-10">
+          <span class="font-headline text-5xl text-[#8c4f10]/20 italic mb-4 leading-none">03</span>
+          <h4 class="text-xl text-[#000e24] mb-2">Treatment</h4>
+          <p class="text-[#43474e] text-sm tracking-wide max-w-[180px]">Expert care delivered with precision and a gentle touch</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BANNER ===================== -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <div class="bg-[#000e24] rounded-xl overflow-hidden relative p-10 md:p-20 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#000e24] via-[#00234b] to-[#000e24]/90"></div>
+      <div class="relative z-10 text-center md:text-left max-w-xl">
+        <h2 class="text-3xl md:text-5xl font-normal text-white mb-4">Begin Your Journey to a Refined Smile</h2>
+        <p class="text-white/60 text-lg">Book your consultation with our Chandigarh specialists today and take the first step towards the smile you deserve.</p>
+      </div>
+      <div class="relative z-10 text-center">
+        <a href="contact.html" class="inline-block bg-[#8c4f10] text-white px-8 md:px-10 py-4 md:py-5 rounded-xl text-lg font-bold shadow-2xl hover:bg-[#763f00] hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 active:scale-95">
+          Book Consultation
+        </a>
+        <p class="text-white/40 text-center mt-4 text-xs font-medium uppercase tracking-widest">Available This Week</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer injected here -->
+<div id="footer-placeholder"></div>
+<script src="footer.js"></script>
+
+<!-- ===================== JS ===================== -->
+<script>
+  // --- Active nav & hamburger (runs after header.js has injected the nav) ---
+ document.querySelectorAll('[data-nav="services"]').forEach(link => {
+  // 1. Change the text color for BOTH mobile and desktop
+  link.classList.add('text-[#8c4f10]');
+  link.classList.remove('text-[#1c1c17]');
+
+  // 2. Add the border (underline) ONLY if it's the desktop link
+  if (link.classList.contains('nav-link')) {
+    link.classList.add('border-b', 'border-[#8c4f10]', 'pb-0.5');
+  }
+});
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = hamburger.querySelectorAll('.hamburger-line');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    if (isOpen) {
+      lines[0].style.transform = 'translateY(8px) rotate(45deg)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+    } else {
+      lines[0].style.transform = '';
+      lines[1].style.opacity = '';
+      lines[2].style.transform = '';
+    }
+  });
+</script>
+
+</body>
+</html>

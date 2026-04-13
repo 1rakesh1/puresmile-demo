@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PureSmile — Sector 17 Dental Excellence</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "surface-bright": "#fcf9f0",
+          "background": "#fcf9f0",
+          "on-background": "#1c1c17",
+          "outline-variant": "#c4c6d0",
+          "outline": "#74777f",
+          "on-surface-variant": "#43474e",
+          "surface-variant": "#e5e2da",
+          "on-primary": "#ffffff",
+          "secondary-container": "#fdad67",
+          "primary": "#000e24",
+          "secondary": "#8c4f10",
+          "surface-dim": "#dddad1",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-highest": "#e5e2da",
+          "on-secondary-container": "#763f00",
+          "on-primary-container": "#718bb9",
+          "tertiary-container": "#371d00",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed": "#001b3d",
+          "surface-container": "#f1eee5",
+          "on-surface": "#1c1c17",
+          "surface-container-low": "#f6f3ea",
+          "primary-fixed": "#d6e3ff",
+          "primary-container": "#00234b",
+          "surface": "#fcf9f0",
+          "surface-container-high": "#ebe8df",
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        fontFamily: {
+          "headline": ["Playfair Display"],
+          "body": ["Plus Jakarta Sans"],
+          "label": ["Plus Jakarta Sans"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+  @media (max-width: 767px) {
+    .hero-img { object-position: calc(50% + 100px) center; }
+  }
+
+  /* Mobile nav slide */
+  #mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  #mobile-menu.open {
+    max-height: 400px;
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+
+<!-- Header injected here -->
+<div id="header-placeholder"></div>
+<script src="header.js"></script>
+
+<main class="pt-16 md:pt-30">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img
+        alt="Luxury Dental Clinic Interior"
+        class="hero-img w-full h-full object-cover"
+        src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1600&q=80"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#fcf9f0]/95 via-[#fcf9f0]/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-[#fcf9f0]/30 md:hidden"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8 w-full py-24">
+      <div class="max-w-2xl">
+        <span class="text-[#8c4f10] font-medium tracking-widest text-sm uppercase mb-4 block">Est. 1994 · Sector 17, Chandigarh</span>
+        <h1 class="text-5xl md:text-7xl font-bold text-[#000e24] leading-[1.1] mb-8">
+          Exceptional Care <br/>
+          <span class="italic font-normal">in the Heart</span> <br/>
+          of Chandigarh
+        </h1>
+        <p class="text-lg text-[#1c1c17]/75 font-normal max-w-md mb-10 leading-relaxed">
+          Experience world-class dental care rooted in trust and precision. Our specialists bring advanced techniques and a gentle touch to every treatment.
+        </p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="services.html" class="bg-[#000e24] text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 active:scale-95 select-none">
+            Discover Our Services
+          </a>
+          <a href="contact.html" class="flex items-center gap-3 text-[#000e24] font-medium hover:text-[#8c4f10] transition-all duration-200 active:scale-95 select-none">
+            <span class="material-symbols-outlined text-[#8c4f10]" style="font-variation-settings:'FILL' 1;">play_circle</span>
+            Book a Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY US ===================== -->
+  <section class="py-24 md:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div class="max-w-xl">
+          <h2 class="text-4xl md:text-5xl font-bold text-[#000e24] mb-6">Why PureSmile is Chandigarh's Preferred Dental Choice</h2>
+          <p class="text-[#1c1c17]/70 text-lg">We combine three decades of clinical expertise with the latest dental technology to deliver a patient experience that sets a new standard in the Tricity.</p>
+        </div>
+        <div class="text-6xl md:text-8xl font-headline text-[#e5e2da] select-none hidden md:block">Experience</div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="md:col-span-2 p-8 md:p-10 rounded-xl bg-[#f6f3ea] border border-[#c4c6d0]/20 hover:bg-[#ebe8df] transition-colors duration-300 group">
+          <span class="material-symbols-outlined text-4xl text-[#8c4f10] mb-6 block">clinical_notes</span>
+          <h3 class="text-2xl font-bold mb-4">Elite Clinical Team</h3>
+          <p class="text-[#1c1c17]/70 leading-relaxed">Our specialists are trained at leading institutions across India and abroad, bringing international-standard expertise to Chandigarh.</p>
+        </div>
+        <div class="p-8 md:p-10 rounded-xl bg-[#f6f3ea] border border-[#c4c6d0]/20 hover:bg-[#ebe8df] transition-colors duration-300">
+          <span class="material-symbols-outlined text-4xl text-[#8c4f10] mb-6 block">auto_awesome</span>
+          <h3 class="text-2xl font-bold mb-4">Bespoke Artistry</h3>
+          <p class="text-[#1c1c17]/70 leading-relaxed">No two smiles are the same. We craft unique aesthetics tailored to your facial structure.</p>
+        </div>
+        <div class="p-8 md:p-10 rounded-xl bg-[#f6f3ea] border border-[#c4c6d0]/20 hover:bg-[#ebe8df] transition-colors duration-300">
+          <span class="material-symbols-outlined text-4xl text-[#8c4f10] mb-6 block">workspace_premium</span>
+          <h3 class="text-2xl font-bold mb-4">Heritage Care</h3>
+          <p class="text-[#1c1c17]/70 leading-relaxed">A commitment to traditional patient care values and long-term oral health that stands the test of time.</p>
+        </div>
+        <div class="md:col-span-4 h-56 md:h-64 rounded-xl overflow-hidden relative">
+          <img
+            alt="Advanced Dental Equipment"
+            class="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1600&q=80"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-[#000e24]/30"></div>
+          <div class="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-white">
+            <p class="text-xs tracking-[0.2em] uppercase font-medium mb-1">State-of-the-Art Technology</p>
+            <p class="text-xl md:text-2xl font-headline">Precision in every detail.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES SNAPSHOT ===================== -->
+  <section class="py-24 md:py-32 bg-[#f6f3ea]">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="text-center mb-16 md:mb-24">
+        <h2 class="text-4xl md:text-5xl font-bold text-[#000e24] mb-4">Our Specialised Care</h2>
+        <div class="h-1 w-24 bg-[#8c4f10] mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-12">
+
+        <!-- Card 1 -->
+        <div class="relative group">
+          <div class="overflow-hidden rounded-xl h-72 md:h-96 mb-8">
+            <img
+              alt="General Dentistry"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute top-4 right-4 w-16 h-16 md:w-20 md:h-20 bg-white rounded-xl shadow flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#000e24] text-3xl">health_and_safety</span>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold text-[#000e24] mb-4">General Dentistry</h3>
+          <p class="text-[#1c1c17]/70 leading-relaxed mb-6">From comprehensive check-ups to advanced hygiene, we maintain the foundation of your oral health with gentle precision.</p>
+          <a href="services.html" class="text-[#8c4f10] font-bold flex items-center gap-2 group-hover:gap-4 transition-all duration-200 active:scale-95 select-none">
+            Explore Service <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Card 2 (offset) -->
+        <div class="relative group lg:mt-16">
+          <div class="overflow-hidden rounded-xl h-72 md:h-96 mb-8">
+            <img
+              alt="Restorative Care"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute top-4 right-4 w-16 h-16 md:w-20 md:h-20 bg-white rounded-xl shadow flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#000e24] text-3xl">build_circle</span>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold text-[#000e24] mb-4">Restorative Care</h3>
+          <p class="text-[#1c1c17]/70 leading-relaxed mb-6">Reclaiming function and beauty through dental implants, porcelain crowns, and high-strength restorative materials.</p>
+          <a href="services.html" class="text-[#8c4f10] font-bold flex items-center gap-2 group-hover:gap-4 transition-all duration-200 active:scale-95 select-none">
+            Explore Service <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="relative group">
+          <div class="overflow-hidden rounded-xl h-72 md:h-96 mb-8">
+            <img
+              alt="Orthodontics"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute top-4 right-4 w-16 h-16 md:w-20 md:h-20 bg-white rounded-xl shadow flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#000e24] text-3xl">straighten</span>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold text-[#000e24] mb-4">Orthodontics</h3>
+          <p class="text-[#1c1c17]/70 leading-relaxed mb-6">Modern alignment solutions including Invisalign and ceramic braces, designed to fit your professional lifestyle seamlessly.</p>
+          <a href="services.html" class="text-[#8c4f10] font-bold flex items-center gap-2 group-hover:gap-4 transition-all duration-200 active:scale-95 select-none">
+            Explore Service <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="py-24 md:py-32 bg-surface overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16 items-center">
+
+        <!-- Left column -->
+        <div class="lg:col-span-4">
+          <h2 class="text-4xl md:text-5xl font-bold text-[#000e24] mb-6">Patient Stories</h2>
+          <p class="text-[#1c1c17]/70 text-lg mb-10">The true measure of our success is the confidence our patients carry out of our clinic.</p>
+          <div class="flex gap-4">
+            <button id="prev-btn" aria-label="Previous testimonial" class="w-12 h-12 rounded-full border border-[#74777f] flex items-center justify-center hover:bg-[#000e24] hover:text-white hover:border-[#000e24] transition-all duration-200 active:scale-95 select-none">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button id="next-btn" aria-label="Next testimonial" class="w-12 h-12 rounded-full border border-[#74777f] flex items-center justify-center hover:bg-[#000e24] hover:text-white hover:border-[#000e24] transition-all duration-200 active:scale-95 select-none">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="lg:col-span-8 overflow-hidden">
+          <div id="testimonial-track" class="flex gap-8">
+            <!-- Card 1 -->
+            <div class="w-[340px] md:w-[400px] flex-shrink-0 p-8 md:p-12 rounded-xl bg-[#f6f3ea] shadow-sm relative">
+              <span class="material-symbols-outlined text-5xl text-[#8c4f10]/20 absolute top-6 right-6">format_quote</span>
+              <div class="flex text-[#8c4f10] mb-5">
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              </div>
+              <p class="text-lg md:text-xl font-headline italic text-[#000e24] leading-relaxed mb-8">"I had been anxious about dental visits for years. The team at PureSmile made me feel completely at ease — the care here is truly in a different league."</p>
+              <div>
+                <p class="font-bold text-[#000e24]">Ananya Mehta</p>
+                <p class="text-sm text-[#1c1c17]/60">Chandigarh Patient since 2019</p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="w-[340px] md:w-[400px] flex-shrink-0 p-8 md:p-12 rounded-xl bg-[#f6f3ea] shadow-sm relative">
+              <span class="material-symbols-outlined text-5xl text-[#8c4f10]/20 absolute top-6 right-6">format_quote</span>
+              <div class="flex text-[#8c4f10] mb-5">
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              </div>
+              <p class="text-lg md:text-xl font-headline italic text-[#000e24] leading-relaxed mb-8">"Got my dental implants done here and the results are outstanding. Dr. Sharma and the entire team were professional, thorough, and genuinely caring throughout."</p>
+              <div>
+                <p class="font-bold text-[#000e24]">Vikram Bhatia</p>
+                <p class="text-sm text-[#1c1c17]/60">Restorative Care Patient</p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="w-[340px] md:w-[400px] flex-shrink-0 p-8 md:p-12 rounded-xl bg-[#f6f3ea] shadow-sm relative">
+              <span class="material-symbols-outlined text-5xl text-[#8c4f10]/20 absolute top-6 right-6">format_quote</span>
+              <div class="flex text-[#8c4f10] mb-5">
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">star</span>
+              </div>
+              <p class="text-lg md:text-xl font-headline italic text-[#000e24] leading-relaxed mb-8">"My Invisalign treatment was explained at every step. I couldn't be happier with how my smile has transformed — highly recommend to anyone in Chandigarh."</p>
+              <div>
+                <p class="font-bold text-[#000e24]">Simran Kaur</p>
+                <p class="text-sm text-[#1c1c17]/60">Orthodontics Patient</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BANNER ===================== -->
+  <section class="py-16 px-6 md:px-8 max-w-7xl mx-auto">
+    <div class="bg-[#000e24] rounded-xl overflow-hidden relative p-10 md:p-20 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #fcf9f0 1px, transparent 0); background-size: 40px 40px;"></div>
+      <div class="relative z-10 text-center md:text-left max-w-xl">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Begin Your Journey to a Refined Smile</h2>
+        <p class="text-white/60 text-lg">Book your complimentary consultation today with our experienced Chandigarh specialists — and take the first step towards a healthier smile.</p>
+      </div>
+      <div class="relative z-10 text-center">
+        <a href="contact.html" class="inline-block bg-[#8c4f10] text-white px-8 md:px-10 py-4 md:py-5 rounded-xl text-lg font-bold shadow-2xl hover:bg-[#763f00] hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 active:scale-95">
+          Book Consultation
+        </a>
+        <p class="text-white/40 text-center mt-4 text-xs font-medium uppercase tracking-widest">Available This Week</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer injected here -->
+<div id="footer-placeholder"></div>
+<script src="footer.js"></script>
+
+<!-- ===================== JS ===================== -->
+<script>
+  // --- Active nav & hamburger (runs after header.js has injected the nav) ---
+document.querySelectorAll('[data-nav="index"]').forEach(link => {
+  // 1. Change the text color for BOTH mobile and desktop
+  link.classList.add('text-[#8c4f10]');
+  link.classList.remove('text-[#1c1c17]');
+
+  // 2. Add the border (underline) ONLY if it's the desktop link
+  if (link.classList.contains('nav-link')) {
+    link.classList.add('border-b', 'border-[#8c4f10]', 'pb-0.5');
+  }
+});
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const lines = hamburger.querySelectorAll('.hamburger-line');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    if (isOpen) {
+      lines[0].style.transform = 'translateY(8px) rotate(45deg)';
+      lines[1].style.opacity = '0';
+      lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+    } else {
+      lines[0].style.transform = '';
+      lines[1].style.opacity = '';
+      lines[2].style.transform = '';
+    }
+  });
+
+  // --- Testimonial Infinite Loop Carousel ---
+  const track = document.getElementById('testimonial-track');
+  const originalCards = Array.from(track.children);
+  const total = originalCards.length;
+
+  originalCards.forEach(card => {
+    track.appendChild(card.cloneNode(true));
+  });
+
+  let current = 0;
+  let isTransitioning = false;
+
+  function getCardWidth() {
+    return track.children[0].offsetWidth + 32;
+  }
+
+  function goTo(index, animate = true) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    current = index;
+    track.style.transition = animate ? 'transform 0.45s cubic-bezier(0.4,0,0.2,1)' : 'none';
+    track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+  }
+
+  track.addEventListener('transitionend', () => {
+    isTransitioning = false;
+    if (current >= total) {
+      current = current - total;
+      track.style.transition = 'none';
+      track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+    } else if (current < 0) {
+      current = current + total;
+      track.style.transition = 'none';
+      track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+    }
+  });
+
+  document.getElementById('prev-btn').addEventListener('click', () => goTo(current - 1));
+  document.getElementById('next-btn').addEventListener('click', () => goTo(current + 1));
+
+  // --- Touch / Swipe Support ---
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let isDragging = false;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    isDragging = true;
+  }, { passive: true });
+
+  track.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const dx = e.touches[0].clientX - touchStartX;
+    const dy = e.touches[0].clientY - touchStartY;
+    if (Math.abs(dy) > Math.abs(dx)) isDragging = false;
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) < 40) return;
+    if (dx < 0) goTo(current + 1);
+    else goTo(current - 1);
+  }, { passive: true });
+
+  setInterval(() => goTo(current + 1), 5000);
+</script>
+
+</body>
+</html>
