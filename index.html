@@ -88,7 +88,7 @@
 <div id="header-placeholder"></div>
 <script src="header.js"></script>
 
-<main class="pt-16 md:pt-30">
+<main class="pt-16 md:pt-28">
 
   <!-- ===================== HERO ===================== -->
   <section class="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -355,24 +355,31 @@ document.querySelectorAll('[data-nav="index"]').forEach(link => {
   }
 });
 
-  const hamburger = document.getElementById('hamburger');
+const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
-  const lines = hamburger.querySelectorAll('.hamburger-line');
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    if (isOpen) {
-      lines[0].style.transform = 'translateY(8px) rotate(45deg)';
-      lines[1].style.opacity = '0';
-      lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
-    } else {
-      lines[0].style.transform = '';
-      lines[1].style.opacity = '';
-      lines[2].style.transform = '';
-    }
-  });
+  if (hamburger && mobileMenu) {
+    const lines = hamburger.querySelectorAll('.hamburger-line');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      if (isOpen) {
+        lines[0].style.transform = 'translateY(8px) rotate(45deg)';
+        lines[1].style.opacity = '0';
+        lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+      } else {
+        lines[0].style.transform = '';
+        lines[1].style.opacity = '';
+        lines[2].style.transform = '';
+      }
+    });
+  }
 
-  // --- Testimonial Infinite Loop Carousel ---
-  const track = document.getElementById('testimonial-track');
+ // --- Testimonial Infinite Loop Carousel ---
+const track = document.getElementById('testimonial-track');
+
+// Guard against double-init on back navigation
+if (track && !track.dataset.initialized) {
+  track.dataset.initialized = 'true';
+
   const originalCards = Array.from(track.children);
   const total = originalCards.length;
 
@@ -382,6 +389,7 @@ document.querySelectorAll('[data-nav="index"]').forEach(link => {
 
   let current = 0;
   let isTransitioning = false;
+  let autoplayTimer = null;
 
   function getCardWidth() {
     return track.children[0].offsetWidth + 32;
@@ -393,6 +401,18 @@ document.querySelectorAll('[data-nav="index"]').forEach(link => {
     current = index;
     track.style.transition = animate ? 'transform 0.45s cubic-bezier(0.4,0,0.2,1)' : 'none';
     track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
   }
 
   track.addEventListener('transitionend', () => {
@@ -408,10 +428,17 @@ document.querySelectorAll('[data-nav="index"]').forEach(link => {
     }
   });
 
-  document.getElementById('prev-btn').addEventListener('click', () => goTo(current - 1));
-  document.getElementById('next-btn').addEventListener('click', () => goTo(current + 1));
+  document.getElementById('prev-btn').addEventListener('click', () => {
+    goTo(current - 1);
+    startAutoplay(); // reset timer on manual interaction
+  });
 
-  // --- Touch / Swipe Support ---
+  document.getElementById('next-btn').addEventListener('click', () => {
+    goTo(current + 1);
+    startAutoplay();
+  });
+
+  // Touch / Swipe Support
   let touchStartX = 0;
   let touchStartY = 0;
   let isDragging = false;
@@ -436,9 +463,20 @@ document.querySelectorAll('[data-nav="index"]').forEach(link => {
     if (Math.abs(dx) < 40) return;
     if (dx < 0) goTo(current + 1);
     else goTo(current - 1);
+    startAutoplay();
   }, { passive: true });
 
-  setInterval(() => goTo(current + 1), 5000);
+  // Stop autoplay when tab is hidden, restart when visible
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopAutoplay();
+    else startAutoplay();
+  });
+
+  startAutoplay();
+}
+ 
+
+  
 </script>
 
 </body>
