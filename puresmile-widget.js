@@ -9,7 +9,7 @@
 
 (function () {
   // ─── CONFIG ───────────────────────────────────────────────────────────────
-  const WORKER_URL = 'https://puresmile-bot.YOUR_SUBDOMAIN.workers.dev/';
+  const WORKER_URL = 'https://puresmile-workder.mail-rkjw.workers.dev/';
   const BRAND      = '#000E24';   // primary: rgb(0, 14, 36)
   const BRAND_D    = '#000918';   // darker hover state
   const ACCENT     = '#8C4F10';   // secondary: rgb(140, 79, 16)
